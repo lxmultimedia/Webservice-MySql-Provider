@@ -15,7 +15,7 @@ import dto.DataObjects;
 
 @Path("/WebService")
 public class DataService {
-	
+
 	@GET
 	@Path("/GetData")
 	@Produces("application/json")
