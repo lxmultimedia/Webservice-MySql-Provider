@@ -24,7 +24,7 @@ public class Database {
 		catch (Exception e)
 		{
 		throw e;	
-		}
+		} 
 	}
 
 }

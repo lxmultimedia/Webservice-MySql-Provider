@@ -16,7 +16,7 @@ public class Project {
 		ArrayList<DataObjects> feedData = new ArrayList<DataObjects>();
 		try
 		{
-			PreparedStatement ps = connection.prepareStatement("SELECT jo_location,jo_location_code,jo_jsonobject FROM yahoodata WHERE jo_location='" + qparameter + "' ORDER BY jo_datetime DESC LIMIT 1;");
+			PreparedStatement ps = connection.prepareStatement("SELECT jo_location,jo_location_code,jo_jsonobject FROM yahoodata WHERE jo_location='" + qparameter + "' AND jo_jsonobject != '[]' ORDER BY jo_datetime DESC LIMIT 1;");
 			ResultSet rs = ps.executeQuery();
 			while(rs.next())
 			{
