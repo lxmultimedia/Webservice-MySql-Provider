@@ -13,7 +13,7 @@ public class Database {
 		String connectionURL = "jdbc:mysql://1163.vps.hostfactory.ch";
 		Connection connection = null;
 		Class.forName("com.mysql.jdbc.Driver").newInstance();
-		connection = DriverManager.getConnection(connectionURL, "root", "bangidus");
+		connection = DriverManager.getConnection(connectionURL, "root", "");
 		connection.setCatalog("mymeteo");
 	    return connection;
 		}
