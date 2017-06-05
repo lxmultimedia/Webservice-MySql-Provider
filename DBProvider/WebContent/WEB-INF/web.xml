@@ -13,6 +13,10 @@
     <servlet-name>ServletAdaptor</servlet-name>
     <servlet-class>
 			com.sun.jersey.server.impl.container.servlet.ServletAdaptor</servlet-class>
+	<init-param>
+    	<param-name>jersey.config.server.provider.classnames</param-name>
+    	<param-value>com.fasterxml.jackson.jaxrs.base.ProviderBase</param-value>
+	</init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
