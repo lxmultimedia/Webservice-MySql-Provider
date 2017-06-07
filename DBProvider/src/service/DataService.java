@@ -1,7 +1,5 @@
 package service;
 
-import java.io.UnsupportedEncodingException;
-import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -54,10 +52,10 @@ public class DataService {
 		{
 			System.out.println("error:" + e.getMessage());
 		}
-			
+
 		return Response.ok(jsonData).build();
 	}
-	
+
 	@GET
 	@Path("/GetCityList")
 	@Produces("application/json")
@@ -128,7 +126,7 @@ public class DataService {
 		}
 		return jsonData;
 	}
-	
+
 	@GET
 	@Path("/GetCityListData")
 	@Produces("application/json")

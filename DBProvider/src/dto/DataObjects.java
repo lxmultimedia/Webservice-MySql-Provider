@@ -1,35 +1,60 @@
 package dto;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.map.JsonMappingException;
-import org.codehaus.jackson.map.ObjectMapper;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.simple.parser.ParseException;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRawValue;
-import com.fasterxml.jackson.core.JsonProcessingException;
-
-import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 public class DataObjects {
-	
+
 	private String location;
 	private String locationcode;
 	private JsonArray jsondata;
 	private String distance;
-	
+	private String cLat;
+
+	private String tempLow;
+	private String tempHigh;
+
+
+	public String getTempLow() {
+		return tempLow;
+	}
+	public void setTempLow(String tempLow) {
+		this.tempLow = tempLow;
+	}
+	public String getTempHigh() {
+		return tempHigh;
+	}
+	public void setTempHigh(String tempHigh) {
+		this.tempHigh = tempHigh;
+	}
+	public String getcLat() {
+		return cLat;
+	}
+	public void setcLat(String cLat) {
+		this.cLat = cLat;
+	}
+
+	public String getcLong() {
+		return cLong;
+	}
+
+	public void setcLong(String cLong) {
+		this.cLong = cLong;
+	}
+
+	private String cLong;
+
 	/**
 	 * @return the location
 	 */
@@ -65,7 +90,7 @@ public class DataObjects {
 	@JsonInclude(Include.NON_NULL)
 	@JsonProperty(value = "jsondata")
 	public JsonArray getJsondata() throws JsonGenerationException, JsonMappingException, IOException, ParseException {
-		
+
 		return jsondata;
 	}
 	/**
@@ -78,7 +103,7 @@ public class DataObjects {
 		JsonParser parser = new JsonParser();
 		JsonElement tradeElement = parser.parse(jsondata.trim());
 		JsonArray trade = tradeElement.getAsJsonArray();
-				
+
 		this.jsondata = trade;		
 	}
 	/**

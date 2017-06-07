@@ -24,7 +24,7 @@ public class DataManager {
 		}
 		return data;
 	}
-	
+
 	public ArrayList<DataObjects> getCityList(String windchillMin, String windchillMax,String winddirMin, String winddirMax,String windspeedMin, String windspeedMax,String humMin,String humMax,String presMin,String presMax,String ris,String visMin,String visMax,String sunrMin, String sunrMax,String sunsMin, String sunsMax,String myLat,String myLong,String distMin,String distMax, String codeMin, String codeMax,String tempMin, String tempMax) throws Exception {
 		ArrayList<DataObjects> data = null;
 		try {
@@ -51,7 +51,7 @@ public class DataManager {
 		}
 		return data;
 	}
-	
+
 	public ArrayList<DataObjects> getCityListData(String windchillMin, String windchillMax,String winddirMin, String winddirMax,String windspeedMin, String windspeedMax,String humMin,String humMax,String presMin,String presMax,String ris,String visMin,String visMax,String sunrMin, String sunrMax,String sunsMin, String sunsMax,String myLat,String myLong,String distMin, String distMax, String codeMin, String codeMax,String tempMin, String tempMax) throws Exception {
 		ArrayList<DataObjects> data = null;
 		try {
